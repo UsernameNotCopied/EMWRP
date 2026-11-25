@@ -1,0 +1,14 @@
+[Unit]
+Description=EMWRP 16x2 LCD Display Daemon
+After=network.target postgresql.service emwrp-logger.service
+Requires=postgresql.service
+
+[Service]
+User=jason
+WorkingDirectory=/home/jason/EMWRP
+ExecStart=/usr/bin/python3 -m emwrp.lcd_display
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

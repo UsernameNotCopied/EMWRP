@@ -1,0 +1,14 @@
+[Unit]
+Description=EMWRP Sensor Logger
+After=network.target postgresql.service
+Requires=postgresql.service
+
+[Service]
+User=jason
+WorkingDirectory=/home/jason/EMWRP
+ExecStart=/usr/bin/python3 -m emwrp.logger
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

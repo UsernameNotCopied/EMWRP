@@ -1,0 +1,8 @@
+flask
+dash
+psycopg2-binary
+python-dotenv
+adafruit-circuitpython-bmp3xx
+adafruit-circuitpython-dht
+adafruit-circuitpython-charlcd
+gpiozero
